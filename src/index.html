@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Markdown editor</title>
+  <link rel="stylesheet" href="css/main.less" />
+</head>
+
+<body>
+  <!-- Begin -->
+  <header class="uk-background-primary uk-light">
+    <div class="uk-container">
+      <nav id="main-navbar" class="uk-navbar-container uk-navbar-transparent uk-navbar" uk-navbar>
+        <div class="uk-navbar-left">
+          <!--Logo-->
+          <a class="uk-navbar-item uk-logo" href="/">
+            <img width="150" src="images/logo_white_full.svg" />
+          </a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="uk-section uk-section-muted" uk-height-viewport="expand: true">
+    <div class="uk-container uk-container-expand">
+        <div class="uk-grid uk-child-width-1-2 uk-grid-divider" 
+        x-data="editor">
+            <div id="editor">
+                <h2>Markdown</h2>
+                <hr>
+                <div class="uk-margin">
+                    <textarea name="text" id="text" cols="30" rows="10" class="uk-textarea" x-model="body"></textarea>
+                </div>
+                <button class="uk-button uk-button-primary" x-on:click="preview">Preview</button>
+                <button class="uk-button uk-button-secondary" x-on:click="reset">Reset</button>
+
+
+
+            </div>
+            <div id="preview">
+                <h2>Output</h2>
+                <hr>
+                <div x-html="markdown"></div>
+
+            </div>
+
+        </div>
+    
+
+
+
+    </div>
+  </main>
+  <script type="module" src="js/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/marked@3.0.4/marked.min.js"></script>
+</body>
+
+</html>
