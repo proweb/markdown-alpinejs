@@ -10,7 +10,7 @@ import UIkit from "uikit";
 import Icons from "uikit/dist/js/uikit-icons";
 
 import Alpine from "alpinejs";
-
+import marked from "marked";
 
 UIkit.use(Icons);
 window.UIkit = UIkit
@@ -18,15 +18,20 @@ window.UIkit = UIkit
 
 // Markdown editor
 Alpine.data('editor', () => ({
-    body: '## Markdown разметка',
+    body: '## Markdown редактор',
     markdown: '',
 
     preview() {
-        this.markdown = window.marked(this.body)
+        this.markdown = marked(this.body)
     },
     reset() {
         this.body = ''
-
+    },
+    init() {
+        setInterval(() => {
+            console.log(this.string)
+            this.preview()
+        }, 2000)        
     }
 }));
 
