@@ -26,25 +26,19 @@
 
   <main class="uk-section uk-section-muted" uk-height-viewport="expand: true">
     <div class="uk-container uk-container-expand">
-        <div class="uk-grid uk-child-width-1-2 uk-grid-divider" 
-        x-data="editor">
+        <div class="uk-grid uk-child-width-1-2@s uk-grid-divider" x-data="editor" uk-margin>
             <div id="editor">
                 <h2>Markdown</h2>
                 <hr>
                 <div class="uk-margin">
                     <textarea name="text" id="text" cols="30" rows="10" class="uk-textarea" x-model="body"></textarea>
-                </div>
-                
-                <button class="uk-button uk-button-secondary" x-on:click="reset">Reset</button>
-
-
-
+                </div>                
+                <button class="uk-button uk-button-secondary uk-margin-bottom" x-on:click="reset">Reset</button>
             </div>
             <div id="preview">
                 <h2>Output</h2>
                 <hr>
                 <div x-html="markdown"></div>
-
             </div>
 
         </div>
