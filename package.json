@@ -9,9 +9,10 @@
   "author": "Sergey Mochalov",
   "license": "MIT",
   "dependencies": {
-    "alpinejs": "^3.3.3",
-    "uikit": "^3.7.3",
     "@parcel/transformer-less": "^2.0.0-rc.0",
-    "parcel": "^2.0.0-rc.0"
+    "alpinejs": "^3.3.3",
+    "marked": "^3.0.4",
+    "parcel": "^2.0.0-rc.0",
+    "uikit": "^3.7.3"
   }
 }
