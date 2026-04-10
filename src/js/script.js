@@ -1,11 +1,3 @@
-/*
-Info: UIkit в этом наборе для поиска багов и нарушения совместимости
-
-@link:
-@link: 
-
-*/
-
 import UIkit from "uikit";
 import Icons from "uikit/dist/js/uikit-icons";
 
@@ -18,7 +10,7 @@ window.UIkit = UIkit
 
 // Markdown editor
 Alpine.data('editor', () => ({
-    body: '## Markdown редактор',
+    body: '',
     markdown: '',
 
     preview() {

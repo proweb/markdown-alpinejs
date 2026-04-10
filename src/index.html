@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Markdown editor</title>
+  <title>Markdown редактор</title>
   <link rel="stylesheet" href="./css/main.less" />
 </head>
 
@@ -31,12 +31,12 @@
                 <h2>Markdown</h2>
                 <hr>
                 <div class="uk-margin">
-                    <textarea name="text" id="text" cols="30" rows="10" class="uk-textarea" x-model="body"></textarea>
+                    <textarea name="text" id="text" cols="30" rows="10" class="uk-textarea" x-model="body" placeholder="Введите текст в формате Markdown..."></textarea>
                 </div>                
-                <button class="uk-button uk-button-secondary uk-margin-bottom" x-on:click="reset">Reset</button>
+                <button class="uk-button uk-button-secondary uk-margin-bottom" x-on:click="reset">Очистить</button>
             </div>
             <div id="preview">
-                <h2>Output</h2>
+                <h2>Итоговый HTML:</h2>
                 <hr>
                 <div x-html="markdown"></div>
             </div>
