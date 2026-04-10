@@ -1,0 +1,9 @@
+
+> alpinejs-playground@1.0.0 start
+> parcel serve src/index.html
+
+Building...
+Bundling...
+Packaging & Optimizing...
+Server running at http://localhost:1234
+✨ Built in 2.00s
